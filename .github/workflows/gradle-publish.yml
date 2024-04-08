@@ -1,4 +1,4 @@
-name: build
+name: Publish APK
 
 on:
   push:
@@ -20,6 +20,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
 
       - name: Run build with Gradle wrapper
         run: ./gradlew assembleRelease -PIS_SO_BUILD=false
