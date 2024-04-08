@@ -1,24 +1,24 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    signing
+//    signing
 }
 
 android {
-    signingConfigs {
-        getByName("debug") {
-            storeFile = file(rootProject.extra["storeFilePath"] as String)
-            storePassword = rootProject.extra["storePwd"] as String
-            keyAlias = rootProject.extra["keyAlias"] as String
-            keyPassword = rootProject.extra["keyPwd"] as String
-        }
-        create("release") {
-            storeFile = file(rootProject.extra["storeFilePath"] as String)
-            storePassword = rootProject.extra["storePwd"] as String
-            keyAlias = rootProject.extra["keyAlias"] as String
-            keyPassword = rootProject.extra["keyPwd"] as String
-        }
-    }
+//    signingConfigs {
+//        getByName("debug") {
+//            storeFile = file(rootProject.extra["storeFilePath"] as String)
+//            storePassword = rootProject.extra["storePwd"] as String
+//            keyAlias = rootProject.extra["keyAlias"] as String
+//            keyPassword = rootProject.extra["keyPwd"] as String
+//        }
+//        create("release") {
+//            storeFile = file(rootProject.extra["storeFilePath"] as String)
+//            storePassword = rootProject.extra["storePwd"] as String
+//            keyAlias = rootProject.extra["keyAlias"] as String
+//            keyPassword = rootProject.extra["keyPwd"] as String
+//        }
+//    }
     namespace = "com.ming.chinadou"
     compileSdk = 34
 
